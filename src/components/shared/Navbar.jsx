@@ -24,10 +24,10 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition duration-300 ${
-          isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-[#ebe8e8]"
+          isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-[#f1eeee]"
         }`}
       >
-        <div className="container mx-auto flex justify-between items-center py-2 px-4">
+        <div className="container mx-auto flex justify-between items-center py-3 px-4 border-b-[1px] border-[#D6D6D6]">
           {/* Logo */}
           <Link href="/">
             <Image
