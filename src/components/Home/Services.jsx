@@ -10,10 +10,24 @@ const Services = () => {
         Our Services
       </div>
 
-      <div>
-        <div>
-          <img src={imageVisa} alt="" />
-          <p className="font-semibold text-[24px]">Multipile Visit Visa</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="w-[361px] h-[473px] border border-[#AEAEAE]">
+          <img className="nd:w-[361px] md:h-[366px]" src={imageVisa} alt="" />
+          <p className="font-semibold text-[24px] py-[30px]">
+            Multipile Visit Visa
+          </p>
+        </div>
+        <div className="w-[361px] h-[473px] border border-[#AEAEAE]">
+          <img className="nd:w-[361px] md:h-[366px]" src={studentVisa} alt="" />
+          <p className="font-semibold text-[24px] py-[30px]">
+            Multipile Visit Visa
+          </p>
+        </div>
+        <div className="w-[361px] h-[473px] border border-[#AEAEAE]">
+          <img className="nd:w-[361px] md:h-[366px]" src={AirTicket} alt="" />
+          <p className="font-semibold text-[24px] py-[30px]">
+            Multipile Visit Visa
+          </p>
         </div>
       </div>
     </>
