@@ -11,34 +11,22 @@ const Services = () => {
         Our Services
       </div>
 
-      <div className="maxWidth">
+      <div className="maxWidth mx-auto">
         <div className="  md:flex gap-[16px] items-center justify-between">
           <div className="md-[361px] md-[473px] border border-[#AEAEAE] rounded-[26px]">
-            <Image
-              className="md:w-[361px] md:h-[366px]"
-              src={imageVisa}
-              alt=""
-            />
+            <Image className="w-full md:h-[366px]" src={imageVisa} alt="" />
             <p className="font-semibold text-[24px] py-[30px] text-center">
               Multipile Visit Visa
             </p>
           </div>
-          <div className="w-[361px] h-[473px] border border-[#AEAEAE] rounded-[26px]">
-            <Image
-              className="nd:w-[361px] md:h-[366px]"
-              src={studentVisa}
-              alt=""
-            />
+          <div className="md:w-[361px] md:h-[473px] border border-[#AEAEAE] rounded-[26px]">
+            <Image className="w-full md:h-[366px]" src={studentVisa} alt="" />
             <p className="font-semibold text-[24px] py-[30px] text-center">
               Multipile Visit Visa
             </p>
           </div>
-          <div className="w-[361px] h-[473px] border border-[#AEAEAE] text-center rounded-[26px]">
-            <Image
-              className="nd:w-[361px] md:h-[366px]"
-              src={AirTicket}
-              alt=""
-            />
+          <div className="md:w-[361px] md:h-[473px] border border-[#AEAEAE] text-center rounded-[26px]">
+            <Image className="w-full md:h-[366px]" src={AirTicket} alt="" />
             <p className="font-semibold text-[24px] py-[30px]">
               Multipile Visit Visa
             </p>
