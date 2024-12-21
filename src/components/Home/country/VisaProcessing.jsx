@@ -6,7 +6,7 @@ const VisaProcessing = () => {
   return (
     <>
       <div className="mb-[99px]">
-        <div className="maxWidth mx-auto md:flex gap-[115px] justify-between">
+        <div className="maxWidth mx-auto md:flex md:gap-[115px] justify-between">
           <div>
             <Image
               className="md:w-[456px] md:h-[332px]"
