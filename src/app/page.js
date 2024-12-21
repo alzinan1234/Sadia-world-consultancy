@@ -1,5 +1,6 @@
 import Banner from "@/components/Home/Banner";
 import Countries from "@/components/Home/country/Countries";
+import VisaProcessing from "@/components/Home/country/VisaProcessing";
 import Dream from "@/components/Home/dream/Dream";
 
 import Services from "@/components/Home/Services";
@@ -13,6 +14,7 @@ const page = () => {
       <Services />
       <Countries />
       <Dream />
+      <VisaProcessing />
     </div>
   );
 };
