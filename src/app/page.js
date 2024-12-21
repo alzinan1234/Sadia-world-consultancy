@@ -1,5 +1,6 @@
 import Appointment from "@/components/Home/Appointment";
 import Banner from "@/components/Home/Banner";
+import Client from "@/components/Home/Client";
 import Countries from "@/components/Home/country/Countries";
 import VisaProcessing from "@/components/Home/country/VisaProcessing";
 import Dream from "@/components/Home/dream/Dream";
@@ -21,6 +22,7 @@ const page = () => {
       <TourPackages />
       <Appointment />
       <Gallery />
+      <Client />
     </div>
   );
 };
