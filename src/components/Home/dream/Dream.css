@@ -1,0 +1,9 @@
+/* background Image */
+
+.background {
+  background-image: url("../../../../public/image/image (5).png");
+  background-size: cover;
+
+  background-position: center;
+  height: 505px;
+}
