@@ -9,7 +9,7 @@ const Appointment = () => {
         <div className="maxWidth flex flex-col md:flex-row md:gap-[98px] items-center md:items-start">
           {/* Text Section */}
           <div className="text-center md:text-left">
-            <h1 className="text-[24px] md:text-[40px] font-medium mb-[10px]">
+            <h1 className="text-[24px] md:text-[40px] font-semibold mb-[10px]">
               Get SWC! Free Appointment
             </h1>
             <p className="text-[16px] md:text-[18px] font-normal text-gray-500 mb-[24px] md:mb-[39px] md:w-[560px]">
