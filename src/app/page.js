@@ -3,6 +3,7 @@ import Banner from "@/components/Home/Banner";
 import Countries from "@/components/Home/country/Countries";
 import VisaProcessing from "@/components/Home/country/VisaProcessing";
 import Dream from "@/components/Home/dream/Dream";
+import Gallery from "@/components/Home/Gallery";
 
 import Services from "@/components/Home/Services";
 import TourPackages from "@/components/Home/TourPackages";
@@ -19,6 +20,7 @@ const page = () => {
       <VisaProcessing />
       <TourPackages />
       <Appointment />
+      <Gallery />
     </div>
   );
 };
