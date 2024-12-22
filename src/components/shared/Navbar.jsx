@@ -44,6 +44,9 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="cursor-pointer hover:text-blue-500">
+              <Link href="/VisaGuide">Visa Guide</Link>
+            </li>
+            <li className="cursor-pointer hover:text-blue-500">
               <Link href="/Services">Visa</Link>
             </li>
             <li className="cursor-pointer hover:text-blue-500">
