@@ -1,5 +1,5 @@
 import React from "react";
-import student from "../../assets/service/long-haired-student-glasses-pointing-blue-folders-high-quality-photo 1.png";
+import student from "../../assets/service/Group 1171276112.png";
 import Image from "next/image";
 import "./Dream.css";
 
@@ -25,7 +25,7 @@ const Dream = () => {
             {/* Image Section */}
             <div className="relative flex justify-center">
               <Image
-                className="w-[250px] h-auto md:w-[405px] md:h-[505px] rounded-lg"
+                className=" md:w-[405px] md:h-[505px] rounded-lg border-bg"
                 src={student}
                 alt="Student Image"
               />

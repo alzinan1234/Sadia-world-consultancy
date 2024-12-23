@@ -1,0 +1,25 @@
+.backgroundImage {
+  background-image: url("../../../../public/image/Frame 1171276255.png");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.backgroundImage1 {
+  background-image: url("../../../../public/image/Group 1171276113.png");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .backgroundImage1,
+  .backgroundImage {
+    height: auto;
+    background-size: contain;
+  }
+}
