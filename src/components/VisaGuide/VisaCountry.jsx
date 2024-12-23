@@ -15,69 +15,154 @@ const VisaCountry = () => {
   const countryDetails = {
     USA: {
       description: "The USA offers various types of visas.",
-      image: "/images/usa.jpg",
+      image: "/image/usa.jpg",
       Visit: {
         details: "Tourist visas (B1/B2) allow short stays in the USA.",
-        image: "/images/usa-visit.jpg",
+        image: "/image/usa-visit.jpg",
       },
       Work: {
-        details: "Work visas include H1B for professionals.",
-        image: "/images/usa-work.jpg",
+        details: `Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate`,
+        image: "/image/usa-work.jpg",
       },
       Student: {
-        details: "F1 visas are issued for students studying in the USA.",
-        image: "/images/usa-student.jpg",
+        details: `Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate
+        `,
+        image: "/image/usa-student.jpg",
       },
     },
     UK: {
       description: "The UK provides multiple visa options.",
-      image: "/images/uk.jpg",
+      image: "/image/uk.jpg",
       Visit: {
         details: "Standard Visitor Visa for tourism or business.",
-        image: "/images/uk-visit.jpg",
+        image: "/image/uk-visit.jpg",
       },
       Work: {
-        details: "Skilled Worker Visa allows long-term employment.",
-        image: "/images/uk-work.jpg",
+        details: `Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate
+        `,
+        image: "/image/uk-work.jpg",
       },
       Student: {
-        details: "Tier 4 Student Visa for higher education.",
-        image: "/images/uk-student.jpg",
+        details: `Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate
+        `,
+        image: "/image/uk-student.jpg",
       },
     },
     Canada: {
       description: "Canada offers Study Permits and Work Permits.",
-      image: "/images/canada.jpg",
+      image: "/image/canada.jpg",
       Visit: {
         details: "Visitor Visas for short-term stays.",
-        image: "/images/canada-visit.jpg",
+        image: "/image/canada-visit.jpg",
       },
       Work: {
         details: "Work Permits for skilled professionals.",
-        image: "/images/canada-work.jpg",
+        image: "/image/canada-work.jpg",
       },
       Student: {
-        details: "Study Permits for international students.",
-        image: "/images/canada-student.jpg",
+        details: `
+         
+           Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate
+        `,
+        image: "/image/canada-student.jpg",
       },
     },
     Australia: {
       description: "Australia offers various visa options.",
-      image: "/images/australia.jpg",
+      image: "/image/australia.jpg",
       Visit: {
         details: "Tourist Visas for travel and leisure.",
-        image: "/images/australia-visit.jpg",
+        image: "/image/australia-visit.jpg",
       },
       Work: {
-        details: "Temporary Work Visas for employment.",
-        image: "/images/australia-work.jpg",
+        details: `
+          
+           Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate
+        `,
+        image: "/image/australia-work.jpg",
       },
       Student: {
-        details: "Student Visas for academic programs.",
-        image: "/images/australia-student.jpg",
+        details: `Language Certificate: IELTS/Duolingo/MOI
+           All Academic Certificates & Mark Sheets
+           SOP (Statement of Purpose)
+           Two Recommendation Letters
+           35x45 size Photo for Australia (Soft Copy, White Background)
+          Passport
+           NID/Birth Certificate
+           Personal CV
+           Sponsor's NID & Photo
+           Spouse Passport/Photos
+           Marriage Certificate`,
+        image: "/image/australia-student.jpg",
       },
     },
   };
+  const detailsArray = countryDetails[selectedCountry]?.[
+    selectedVisaType
+  ]?.details
+    ?.split("\n")
+    .map((item) => item.trim())
+    .slice(1, -1); // Skip first and last item
 
   return (
     <div>
@@ -93,7 +178,7 @@ const VisaCountry = () => {
           </div>
           <div className="relative w-full md:w-auto">
             <div
-              className="flex justify-between gap-2 items-center bg-[#EAE8E8] px-[32px] p-[14px] rounded-[8px] cursor-pointer"
+              className="flex justify-between gap-2 items-center bg-[#EAE8E8] px-[32px] p-[14px]  rounded-[8px] cursor-pointer"
               onClick={() => setCountryDropdownOpen(!countryDropdownOpen)}
             >
               <span>{selectedCountry || "Select Your Country"}</span>
@@ -174,43 +259,82 @@ const VisaCountry = () => {
 
       {/* Display Details */}
       {selectedCountry && (
-        <div className="mt-[20px] max-Width">
-          <div className="p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#F9F9F9] shadow-lg">
-            <div>
-              <h2 className="text-[20px] font-semibold mb-[10px]">
-                Visa Details for {selectedCountry}
-              </h2>
-              <p className="text-[16px]">
-                {countryDetails[selectedCountry].description}
-              </p>
+        <div className="py-14">
+          <div className="mt-[50px] mb-10 maxWidth">
+            <div className="p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#F9F9F9] shadow-lg  py-10">
+              <div className="md:flex justify-between items-center mb-[20px] py-10">
+                <div>
+                  <h2 className="text-[34px] font-semibold mb-[10px]">
+                    Visa Details for {selectedCountry}
+                  </h2>
+                  <p className="text-[20px] font-normal">
+                    <ol className=" flex flex-col gap-2 list-decimal p-8">
+                      <li>Valid Passport Copy </li>
+                      <li> All Previous Visa Copies </li>
+                      <li> Nid/Birth Certificate Copy </li>
+                      <li> Nikha Nama (If Married)</li>
+                      <li>
+                        2x2 Photo For USA (CANADA+ UK+ AUSTRALIA For 35x45
+                        Photo){" "}
+                      </li>
+                      <li>
+                        {" "}
+                        Children's Birth Certificate/School ID Card Copy (If
+                        Family Visit)
+                      </li>
+                      <li>Bank Statement/Bank Solvency</li>
+                      <li>Asset Valuation</li>
+                      <li>Tax Return/Certificate</li>
+                      <li> Hotel Booking </li>
+                      <li> Air Ticket Booking</li>
+                    </ol>
+                  </p>
+                </div>
+                <div>
+                  <Image
+                    src={countryDetails[selectedCountry].image}
+                    alt={`${selectedCountry} Image`}
+                    width={400}
+                    height={300}
+                    className="md:w-[380px] md:h-[260px] mb-[10px] rounded-[8px]"
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <Image
-                src={countryDetails[selectedCountry].image}
-                alt={`${selectedCountry} Image`}
-                width={400}
-                height={300}
-                className="w-full h-auto mb-[10px] rounded-[8px]"
-              />
-            </div>
+            {selectedVisaType && (
+              <div className="mt-10">
+                <div className=" maxWidth py-[40px] p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#FFFFFF] shadow-lg ">
+                  <div className=" md:flex justify-between  mb-[20px] py-10 ">
+                    <div>
+                      <h3 className="text-[38px] font-semibold mb-[10px]">
+                        {selectedVisaType} Visa Details
+                      </h3>
+                      <ul className="text-[20px] font-semibold">
+                        {detailsArray?.map((detail, index) => (
+                          <li key={index} className="flex items-center">
+                            <span className="mr-2">✔️</span>
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <Image
+                        src={
+                          countryDetails[selectedCountry][selectedVisaType]
+                            .image
+                        }
+                        alt={`${selectedVisaType} Visa Image`}
+                        width={400}
+                        height={300}
+                        className="md:w-[380px] md:h-[260px] mb-[10px] rounded-[8px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          {selectedVisaType && (
-            <div className="py-[40px] p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#FFFFFF] shadow-lg">
-              <h3 className="text-[18px] font-semibold mb-[10px]">
-                {selectedVisaType} Visa Details
-              </h3>
-              <Image
-                src={countryDetails[selectedCountry][selectedVisaType]?.image}
-                alt={`${selectedVisaType} Visa`}
-                width={400}
-                height={350}
-                className=" mb-[10px] rounded-[8px]"
-              />
-              <p className="text-[16px]">
-                {countryDetails[selectedCountry][selectedVisaType]?.details}
-              </p>
-            </div>
-          )}
         </div>
       )}
     </div>
