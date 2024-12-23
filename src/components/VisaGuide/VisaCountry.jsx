@@ -100,9 +100,7 @@ const VisaCountry = () => {
         image: "/image/canada-work.jpg",
       },
       Student: {
-        details: `
-         
-           Language Certificate: IELTS/Duolingo/MOI
+        details: `Language Certificate: IELTS/Duolingo/MOI
            All Academic Certificates & Mark Sheets
            SOP (Statement of Purpose)
            Two Recommendation Letters
@@ -125,9 +123,7 @@ const VisaCountry = () => {
         image: "/image/australia-visit.jpg",
       },
       Work: {
-        details: `
-          
-           Language Certificate: IELTS/Duolingo/MOI
+        details: ` Language Certificate: IELTS/Duolingo/MOI
            All Academic Certificates & Mark Sheets
            SOP (Statement of Purpose)
            Two Recommendation Letters
@@ -309,7 +305,7 @@ const VisaCountry = () => {
                       <h3 className="text-[38px] font-semibold mb-[10px]">
                         {selectedVisaType} Visa Details
                       </h3>
-                      <ul className="text-[20px] font-semibold">
+                      <ul className="text-[20px] font-normal">
                         {detailsArray?.map((detail, index) => (
                           <li key={index} className="flex items-center">
                             <span className="mr-2">✔️</span>
