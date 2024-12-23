@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
 
@@ -13,8 +14,8 @@ const VisaCountry = () => {
 
   const countryDetails = {
     USA: {
-      description: "  The USA offers various types of visas.",
-      image: "/images/usa.jpg", // Replace with your image paths
+      description: "The USA offers various types of visas.",
+      image: "/images/usa.jpg",
       Visit: {
         details: "Tourist visas (B1/B2) allow short stays in the USA.",
         image: "/images/usa-visit.jpg",
@@ -110,7 +111,7 @@ const VisaCountry = () => {
                     className="px-[16px] py-[8px] hover:bg-[#EAE8E8] cursor-pointer"
                     onClick={() => {
                       setSelectedCountry(country);
-                      setSelectedVisaType(""); // Reset visa type
+                      setSelectedVisaType("");
                       setCountryDropdownOpen(false);
                     }}
                   >
@@ -154,6 +155,7 @@ const VisaCountry = () => {
               </ul>
             )}
           </div>
+
           {/* Go Button */}
           <div className="w-full md:w-auto text-center">
             <button
@@ -172,32 +174,40 @@ const VisaCountry = () => {
 
       {/* Display Details */}
       {selectedCountry && (
-        <div className="mt-[20px]">
+        <div className="mt-[20px] max-Width">
           <div className="p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#F9F9F9] shadow-lg">
-            <h2 className="text-[20px] font-semibold mb-[10px]">
-              Visa Details for {selectedCountry}
-            </h2>
-            <img
-              src={countryDetails[selectedCountry].image}
-              alt={`${selectedCountry} Image`}
-              className="w-full h-auto mb-[10px] rounded-[8px]"
-            />
-            <p className="text-[16px]">
-              {countryDetails[selectedCountry].description}
-            </p>
+            <div>
+              <h2 className="text-[20px] font-semibold mb-[10px]">
+                Visa Details for {selectedCountry}
+              </h2>
+              <p className="text-[16px]">
+                {countryDetails[selectedCountry].description}
+              </p>
+            </div>
+            <div>
+              <Image
+                src={countryDetails[selectedCountry].image}
+                alt={`${selectedCountry} Image`}
+                width={400}
+                height={300}
+                className="w-full h-auto mb-[10px] rounded-[8px]"
+              />
+            </div>
           </div>
           {selectedVisaType && (
-            <div className="mt-[20px] p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#FFFFFF] shadow-lg">
+            <div className="py-[40px] p-[20px] border border-[#D9D9D9] rounded-[8px] bg-[#FFFFFF] shadow-lg">
               <h3 className="text-[18px] font-semibold mb-[10px]">
                 {selectedVisaType} Visa Details
               </h3>
-              <img
-                src={countryDetails[selectedCountry][selectedVisaType].image}
+              <Image
+                src={countryDetails[selectedCountry][selectedVisaType]?.image}
                 alt={`${selectedVisaType} Visa`}
-                className="w-full h-auto mb-[10px] rounded-[8px]"
+                width={400}
+                height={350}
+                className=" mb-[10px] rounded-[8px]"
               />
               <p className="text-[16px]">
-                {countryDetails[selectedCountry][selectedVisaType].details}
+                {countryDetails[selectedCountry][selectedVisaType]?.details}
               </p>
             </div>
           )}
