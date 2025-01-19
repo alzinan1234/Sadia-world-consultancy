@@ -13,8 +13,9 @@ const Client = () => {
           Our Happy Clients
         </h1>
         <p className="text-[18px] text-center mt-4">
-          Join thousands of happy clients who have trusted Sadia World
-          Consultancy to make their travel and study <br /> dreams come true!
+          Join thousands of happy clients who have trusted Saida World
+          Consultancy to make their travel and study Consultancy to make their
+          travel and study <br /> dreams come true!
         </p>
       </div>
       <div className="mb-[182px]">
