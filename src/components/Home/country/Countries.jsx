@@ -26,7 +26,7 @@ const Countries = () => {
     },
     { name: "Canada", hotels: "36 Hotels Available", image: Canada },
     {
-      name: "Schengen Countries",
+      name: "Sheen Countries",
       hotels: "36 Hotels Available",
       image: Schengen,
     },
