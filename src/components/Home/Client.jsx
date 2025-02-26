@@ -17,7 +17,7 @@ const Client = () => {
           Consultancy to make their travel and study Consultancy to make their
           travel and study <br /> dreams come true!
         </p>
-        <p>hello world </p>
+        <p>hello world</p>
       </div>
       <div className="mb-[182px]">
         <div className="maxWidth mx-auto ">
