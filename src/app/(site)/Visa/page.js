@@ -1,7 +1,12 @@
 import React from "react";
 
 const page = () => {
-  return <div></div>;
+  return (
+    <div>
+      {" "}
+      sadiya world is consulency for gose for help us us aus many country{" "}
+    </div>
+  );
 };
 
 export default page;
